@@ -15,6 +15,14 @@ public class Cliente extends AbstractPessoa {
     private String email;
     @Column(name="rg")
     private String rg;
+    @Column(name = "tipoDocumento")
+    private Documento documento;
+    @Column(name = "Sexo")
+    private  Sexo sexo;
+    @Column(name = "Raça")
+    private Raca raca;
+    @Column (name = "Pagamento")
+    private Pagamento pagamento;
 
     public Cliente(){
 
@@ -53,4 +61,5 @@ public class Cliente extends AbstractPessoa {
     public void setRg(String rg) {
         this.rg = rg;
     }
+
 }

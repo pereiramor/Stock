@@ -16,7 +16,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
     @RestController
     @RequestMapping("/api/Movimentacoes")
     public class MovimentacaoController {
@@ -32,7 +31,7 @@ import java.util.Map;
 
         @GetMapping("/{id}")
         public Movimentacao getMovimentacoesId(@PathVariable(value = "id") Long MovimentacaoId, @RequestBody Movimentacao movimentacao) throws EntityNotFoundException {
-            Movimentacao movimentacaoFind = repository.findById(MovimentacaoId).orElseThrow(() -> new EntityNotFoundException("Movimentacao não encontrada com ID::" + MovimentacaoId));
+            Movimentacao movimentacaoFind = repository.findById(MovimentacaoId).orElseThrow(() -> new EntityNotFoundException("Movimentaçao não encontrada com ID:" + MovimentacaoId));
             return movimentacaoFind;
         }
 
@@ -40,36 +39,36 @@ import java.util.Map;
         public Movimentacao create(@RequestBody Movimentacao movimentacao) {
             return repository.save(movimentacao);
         }
-    }
-//        @PutMapping("/{id}")
-//        public Movimentacao update(@PathVariable(value = "id") Long movimentacaoId, @RequestBody Movimentacao movimentacao) throws EntityNotFoundException {
-//            Movimentacao movimentacaoFind = repository.findById(cidadeId).orElseThrow(() -> new EntityNotFoundException("Cidade não encontrada com 10::  "+cidadeId));
-//            movimentacaoFind.setId(cidade.getId());
-//            movimentacaoFind.setNome(cidade.getNome());
-//
-//            return repository.save(cidadeFind);
-//
-//        }
-//
-//        @DeleteMapping("/{id}")
-//        public ResponseEntity delete(@PathVariable(value = "id") Long id) throws EntityNotFoundException {
-//            Cidade cidadeFind = repository.findById(id)
-//                    .orElseThrow(() -> new EntityNotFoundException("Cidade não encontrada com ID::" + id));
-//
-//            repository.delete(cidadeFind);
-//            return ResponseEntity.noContent().build();
-//        }
-//
-//        @ResponseStatus(HttpStatus.BAD_REQUEST)
-//        @ExceptionHandler(MethodArgumentNotValidException.class)
-//        public Map<String, String> handleValidationExceptions(
-//                MethodArgumentNotValidException ex) {
-//            Map<String, String> errors = new HashMap<>();
-//            ex.getBindingResult().getAllErrors().forEach((error) -> {
-//                String fieldName = ((FieldError) error).getField();
-//                String errorMessage = error.getDefaultMessage();
-//                errors.put(fieldName, errorMessage);
-//            });
-//            return errors;
-//        }
-//}
+
+        @PutMapping("/{id}")
+        public Movimentacao update(@PathVariable(value = "id") Long movimentacaoId, @RequestBody Movimentacao movimentacao) throws EntityNotFoundException {
+            Movimentacao movimentacaoFind = repository.findById(movimentacaoId).orElseThrow(() -> new EntityNotFoundException("Movimentacao não encontrada com 10:  "+movimentacaoId));
+            movimentacaoFind.setId(movimentacao.getId());
+            movimentacaoFind.setMercadoria(movimentacao.getMercadoria());
+
+            return repository.save(movimentacaoFind);
+
+        }
+
+        @DeleteMapping("/{id}")
+        public ResponseEntity delete(@PathVariable(value = "id") Long id) throws EntityNotFoundException {
+            Movimentacao movimentacaoFind = repository.findById(id)
+                    .orElseThrow(() -> new EntityNotFoundException("Movimentaçao não encontrada com ID:" + id));
+
+            repository.delete(movimentacaoFind);
+            return ResponseEntity.noContent().build();
+        }
+
+        @ResponseStatus(HttpStatus.BAD_REQUEST)
+        @ExceptionHandler(MethodArgumentNotValidException.class)
+        public Map<String, String> handleValidationExceptions(
+                MethodArgumentNotValidException ex) {
+            Map<String, String> errors = new HashMap<>();
+            ex.getBindingResult().getAllErrors().forEach((error) -> {
+                String fieldName = ((FieldError) error).getField();
+                String errorMessage = error.getDefaultMessage();
+                errors.put(fieldName, errorMessage);
+            });
+            return errors;
+        }
+}

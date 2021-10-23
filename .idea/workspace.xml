@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a198898-80e6-4d93-9c94-6e0369d9c548" name="Default Changelist" comment="" />
+    <list default="true" id="9a198898-80e6-4d93-9c94-6e0369d9c548" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Pagamento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EnderecoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstadoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstoqueDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/FornecedorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MercadoriaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MovimentacaoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/PaisDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Fornecedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Fornecedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Mercadoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Mercadoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Movimentacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Movimentacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MercadoriaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MercadoriaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MovimentacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MovimentacaoController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +41,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1x2bQsvdqzH9X0lLrXqux9Qgpeg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,6 +52,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -68,5 +93,17 @@
       <updated>1629556125266</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -23,6 +23,8 @@ public class Mercadoria extends AbstractEntity {
     @Digits(integer = 3, fraction = 2, message = "O valor unitário não pode ultrapassar 2 digitos depois da virgula!")
     @Column(name="Valor_Unitario")
     private Double valorUnitario;
+    @Column (name = "Pagamento")
+    private Pagamento pagamento;
 
     public Mercadoria(){
 

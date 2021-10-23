@@ -16,6 +16,9 @@ public class Movimentacao extends AbstractEntity {
     private Mercadoria mercadoria;
     @Column(name="quantidade")
     private Double quantidade;
+    @Column (name = "Pagamento")
+    private Pagamento pagamento;
+
 
     public Movimentacao() {
     }

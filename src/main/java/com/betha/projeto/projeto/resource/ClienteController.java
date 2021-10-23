@@ -1,5 +1,7 @@
 package com.betha.projeto.projeto.resource;
 
+import ch.qos.logback.core.net.server.Client;
+import com.betha.projeto.projeto.model.Cidade;
 import com.betha.projeto.projeto.model.Cliente;
 import com.betha.projeto.projeto.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,5 +56,18 @@ public class ClienteController {
 
         repository.delete(clienteFind);
         return ResponseEntity.noContent().build();
+    }
+    public static ClienteDTO toDTO (Cliente cliente){
+        CidadeDTO dto = new ClienteDTO();
+        dto.setId(cliente.get());
+        dto.setNome(cliente.getNome());
+        return dto;
+    }
+
+    public static Cidade fromDTO (CidadeDTO dto){
+        Cidade entity = new Cidade();
+        entity.setId(dto.getId());
+        entity.setNome(dto.getNome());
+        return entity;
     }
 }

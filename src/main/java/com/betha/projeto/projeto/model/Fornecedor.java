@@ -12,6 +12,8 @@ public class Fornecedor extends AbstractPessoa {
     private String cnpj;
     @Column(name="numero_telefone")
     private String telefone;
+    @Column (name = "Pagamento")
+    private Pagamento pagamento;
 
     public Fornecedor(){
 
