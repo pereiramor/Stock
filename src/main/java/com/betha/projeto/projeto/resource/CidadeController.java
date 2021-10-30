@@ -72,18 +72,4 @@ public class CidadeController {
         });
         return errors;
     }
-
-    public static CidadeDTO toDTO (Cidade cidade){
-        CidadeDTO dto = new CidadeDTO();
-        dto.setId(cidade.getId());
-        dto.setNome(cidade.getNome());
-        return dto;
-    }
-
-    public static Cidade fromDTO (CidadeDTO dto){
-        Cidade entity = new Cidade();
-        entity.setId(dto.getId());
-        entity.setNome(dto.getNome());
-        return entity;
-    }
 }

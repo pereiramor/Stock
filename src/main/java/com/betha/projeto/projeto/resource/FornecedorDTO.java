@@ -1,5 +1,8 @@
 package com.betha.projeto.projeto.resource;
 
+import com.betha.projeto.projeto.model.Cliente;
+import com.betha.projeto.projeto.model.Fornecedor;
+
 public class FornecedorDTO {
     Long id;
     String nome;
@@ -13,6 +16,10 @@ public class FornecedorDTO {
         this.cnpj = cnpj;
         this.enderecos = enderecos;
         this.telefone = telefone;
+    }
+
+    public  FornecedorDTO (){
+
     }
 
     public Long getId() {
@@ -53,5 +60,26 @@ public class FornecedorDTO {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+    public static FornecedorDTO toDTO(Fornecedor fornecedor){
+        ClienteDTO dto = new ClienteDTO();
+        dto.setId(fornecedor.getId());
+        dto.setNome(fornecedor.getNome());
+        dto.setCpf(fornecedor.getCnpj());
+        dto.setEnderecos(fornecedor.getEnderecos());
+        dto.setTelefone(fornecedor.getTelefone());
+
+        return dto;
+    }
+
+    public static Fornecedor fromDTO(FornecedorDTO dto){
+        Fornecedor entity = new Fornecedor ();
+        entity.setId(dto.getId());
+        entity.setNome(dto.getNome());
+        entity.setCnpj(dto.getCnpj());
+        entity.setEnderecos(dto.getEnderecos());
+        entity.setTelefone(dto.getTelefone());
+
+        return entity;
     }
 }

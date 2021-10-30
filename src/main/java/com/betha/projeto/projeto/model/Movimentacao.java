@@ -32,7 +32,7 @@ public class Movimentacao extends AbstractEntity {
         this.tipo = tipo;
     }
 
-    public Mercadoria getMercadoria() {
+    public String getMercadoria() {
         return mercadoria;
     }
 
