@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
     @RestController
-    @RequestMapping("/api/Movimentacoes")
+    @RequestMapping("/api/movimentacoes")
     public class MovimentacaoController {
 
         @Autowired

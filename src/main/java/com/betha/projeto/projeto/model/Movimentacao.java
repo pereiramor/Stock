@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Movimentacao extends AbstractEntity {
     @Column(name="Tipo_de_movimentacao")
-    private String tipo;
+    private TipoMovimentacao tipo;
     @ManyToOne
     @JoinColumn(name = "I_MERCADORIA",referencedColumnName = "ID")
     private Mercadoria mercadoria;
@@ -23,16 +23,15 @@ public class Movimentacao extends AbstractEntity {
     public Movimentacao() {
     }
 
-
-    public String getTipo() {
+    public TipoMovimentacao getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoMovimentacao tipo) {
         this.tipo = tipo;
     }
 
-    public String getMercadoria() {
+    public Mercadoria getMercadoria() {
         return mercadoria;
     }
 

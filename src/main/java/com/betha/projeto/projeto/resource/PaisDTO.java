@@ -5,9 +5,9 @@ import com.betha.projeto.projeto.model.Pais;
 public class PaisDTO {
     Long id;
     String name;
-    String populacao;
+    Double populacao;
 
-    public PaisDTO(Long id, String name, String populacao) {
+    public PaisDTO(Long id, String name, Double populacao) {
         this.id = id;
         this.name = name;
         this.populacao = populacao;
@@ -36,14 +36,13 @@ public class PaisDTO {
         return populacao;
     }
 
-    public void setPopulacao(String populacao) {
+    public void setPopulacao(Double populacao) {
         this.populacao = populacao;
     }
 
     public static PaisDTO toDTO(Pais pais){
         PaisDTO dto = new PaisDTO();
         dto.setId(pais.getId());
-        dto.setName(pais.getName());
         dto.setPopulacao(pais.getPopulacao());
 
         return dto;
@@ -56,5 +55,5 @@ public class PaisDTO {
         entity.setPopulacao(dto.getPopulacao());
 
         return entity;
-}
+        }
 }

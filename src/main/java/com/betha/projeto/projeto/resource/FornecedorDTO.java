@@ -1,6 +1,6 @@
 package com.betha.projeto.projeto.resource;
 
-import com.betha.projeto.projeto.model.Cliente;
+
 import com.betha.projeto.projeto.model.Fornecedor;
 
 public class FornecedorDTO {
@@ -61,13 +61,11 @@ public class FornecedorDTO {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
     public static FornecedorDTO toDTO(Fornecedor fornecedor){
-        ClienteDTO dto = new ClienteDTO();
-        dto.setId(fornecedor.getId());
+        FornecedorDTO dto = new FornecedorDTO();
         dto.setNome(fornecedor.getNome());
-        dto.setCpf(fornecedor.getCnpj());
-        dto.setEnderecos(fornecedor.getEnderecos());
-        dto.setTelefone(fornecedor.getTelefone());
+        dto.setCnpj(fornecedor.getCnpj());
 
         return dto;
     }
@@ -77,7 +75,6 @@ public class FornecedorDTO {
         entity.setId(dto.getId());
         entity.setNome(dto.getNome());
         entity.setCnpj(dto.getCnpj());
-        entity.setEnderecos(dto.getEnderecos());
         entity.setTelefone(dto.getTelefone());
 
         return entity;

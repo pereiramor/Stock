@@ -37,10 +37,7 @@ public class EstadoController {
     @PutMapping("/{id}")
     public Estado update(@PathVariable(value = "id") Long estadoId, @RequestBody Estado estado) throws EntityNotFoundException {
        Estado estadoFind = repository.findById(estadoId).orElseThrow(() -> new EntityNotFoundException("Estado não encontrado com ID::  "+estadoId));
-        estadoFind.setId(estado.getId());
         estadoFind.setNome(estado.getNome());
-
-
 
         return repository.save(estadoFind);
 

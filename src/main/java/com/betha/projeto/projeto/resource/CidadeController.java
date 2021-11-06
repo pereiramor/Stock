@@ -10,11 +10,9 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityNotFoundException;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @RestController
@@ -71,5 +69,19 @@ public class CidadeController {
             errors.put(fieldName, errorMessage);
         });
         return errors;
+    }
+
+    public static CidadeDTO toDTO (Cidade cidade){
+        CidadeDTO dto = new CidadeDTO();
+        dto.setId(cidade.getId());
+        dto.setNome(cidade.getNome());
+        return dto;
+    }
+
+    public static Cidade fromDTO (CidadeDTO dto){
+        Cidade entity = new Cidade();
+        entity.setId(dto.getId());
+        entity.setNome(dto.getNome());
+        return entity;
     }
 }

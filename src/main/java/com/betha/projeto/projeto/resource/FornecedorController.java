@@ -1,7 +1,9 @@
 package com.betha.projeto.projeto.resource;
 
 import com.betha.projeto.projeto.model.Cidade;
+import com.betha.projeto.projeto.model.Fornecedor;
 import com.betha.projeto.projeto.repository.CidadeRepository;
+import com.betha.projeto.projeto.repository.FornecedorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,45 +16,46 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RestController
-@RequestMapping()
-public class FornecedorController {
+    @RestController
+    @RequestMapping("/api/fornecedores")
+    public class FornecedorController {
     @Autowired
-    private CidadeRepository repository;
+    private FornecedorRepository repository;
 
     @GetMapping
-    public List<Cidade> getCidades() {
+    public List<Fornecedor> getCidades() {
 
         return repository.findAll();
     }
 
     @GetMapping("/{id}")
-    public Cidade getCidadesId(@PathVariable(value = "id") Long cidadeId, @RequestBody Cidade cidade) throws EntityNotFoundException {
-        Cidade cidadeFind = repository.findById(cidadeId).orElseThrow(() ->new EntityNotFoundException("Cidade não encontrado com ID::" +cidadeId));
-        return cidadeFind;
+    public Fornecedor getFornecedoresId(@PathVariable(value = "id") Long fornecedorId, @RequestBody Fornecedor fornecedor) throws EntityNotFoundException {
+        Fornecedor fornecedorFind = repository.findById(fornecedorId).orElseThrow(() ->new EntityNotFoundException("Fornecedor não encontrado com ID::" +fornecedorId));
+        return fornecedorFind;
     }
 
     @PostMapping
-    public Cidade create(@RequestBody Cidade cidade) {
-        return repository.save(cidade);
+    public Fornecedor create(@RequestBody Fornecedor fornecedor) {
+        return repository.save(fornecedor);
     }
 
     @PutMapping("/{id}")
-    public Cidade update(@PathVariable(value = "id") Long cidadeId, @RequestBody Cidade cidade) throws EntityNotFoundException {
-        Cidade cidadeFind = repository.findById(cidadeId).orElseThrow(() -> new EntityNotFoundException("Cidade não encontrada com 10::  "+cidadeId));
-        cidadeFind.setId(cidade.getId());
-        cidadeFind.setNome(cidade.getNome());
+    public Fornecedor update(@PathVariable(value = "id") Long fornecedorId, @RequestBody Fornecedor fornecedor) throws EntityNotFoundException {
+        Fornecedor fornecedorFind = repository.findById(fornecedorId).orElseThrow(() -> new EntityNotFoundException("Fornecedor não encontrado com ID::  "+fornecedorId));
+        fornecedorFind.setId(fornecedor.getId());
+        fornecedorFind.setNome(fornecedor.getNome());
+        fornecedorFind.setCnpj(fornecedor.getCnpj());
+        fornecedorFind.setTelefone(fornecedor.getTelefone());
 
-        return repository.save(cidadeFind);
+        return repository.save(fornecedorFind);
 
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable(value = "id") Long id) throws EntityNotFoundException {
-        Cidade cidadeFind = repository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Cidade não encontrada com ID::" + id));
+        Fornecedor fornecedorFind = repository.findById(id).orElseThrow(() -> new EntityNotFoundException("Fornecedor não encontrado com ID::" + id));
 
-        repository.delete(cidadeFind);
+        repository.delete(fornecedorFind);
         return ResponseEntity.noContent().build();
     }
 

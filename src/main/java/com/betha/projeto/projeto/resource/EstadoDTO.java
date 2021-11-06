@@ -1,21 +1,27 @@
 package com.betha.projeto.projeto.resource;
 
+
+import com.betha.projeto.projeto.model.Estado;
+
 public class EstadoDTO {
-    String id;
+    Long id;
     String nome;
     String pais;
 
-    public EstadoDTO(String id, String nome, String pais) {
+    public EstadoDTO(Long id, String nome, String pais) {
         this.id = id;
         this.nome = nome;
         this.pais = pais;
     }
+    public EstadoDTO() {
 
-    public String getId() {
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -33,5 +39,19 @@ public class EstadoDTO {
 
     public void setPais(String pais) {
         this.pais = pais;
+    }
+
+    public static EstadoDTO toDTO (Estado estado){
+        EstadoDTO dto = new EstadoDTO();
+        dto.setId(estado.getId());
+        dto.setNome(estado.getNome());
+        return dto;
+    }
+
+    public static Estado fromDTO (EstadoDTO dto){
+        Estado entity = new Estado();
+        entity.setId(dto.getId());
+        entity.setNome(dto.getNome());
+        return entity;
     }
 }

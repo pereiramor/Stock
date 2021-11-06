@@ -30,7 +30,7 @@ public class Pais extends AbstractEntity {
         this.nome = nome;
     }
 
-    public String getPopulacao() {
+    public Double getPopulacao() {
         return populacao;
     }
 

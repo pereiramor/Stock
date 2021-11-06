@@ -37,7 +37,6 @@ public class EstoqueController {
     @PutMapping("/{id}")
     public Estoque update(@PathVariable(value = "id") Long estoqueId, @RequestBody Estoque estoque) throws EntityNotFoundException {
         Estoque estoqueFind = repository.findById(estoqueId).orElseThrow(() -> new EntityNotFoundException("Endereco não encontrado com ID::  "+estoqueId));
-        estoqueFind.setId(estoque.getId());
        estoqueFind.setDescricao(estoque.getDescricao());
 
         return repository.save(estoqueFind);
