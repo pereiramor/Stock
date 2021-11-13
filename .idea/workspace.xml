@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a198898-80e6-4d93-9c94-6e0369d9c548" name="Default Changelist" comment="alteraçoes projeto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/CorsConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_11_2021_10_24_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_11_2021_10_24__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_10_2021_10_06_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_10_2021_10_06__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/CorsConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/CorsConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/ProjetoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/ProjetoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstadoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstadoDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +22,8 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
