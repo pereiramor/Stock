@@ -5,35 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a198898-80e6-4d93-9c94-6e0369d9c548" name="Default Changelist" comment="alteraçoes projeto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/ContaUsuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/TipoMovimentacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/CorsConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_11_2021_10_24_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_11_2021_10_24__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_10_2021_10_06_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_10_2021_10_06__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/projeto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Movimentacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Movimentacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Pais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Pais.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EnderecoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EnderecoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstadoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstadoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstoqueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstoqueDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstoqueDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/FornecedorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/FornecedorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/FornecedorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/FornecedorDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MovimentacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MovimentacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MovimentacaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MovimentacaoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/PaisDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/PaisDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/projeto-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/projeto-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2021-10-01T20-03-58_211-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.betha.projeto.projeto.ProjetoApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.betha.projeto.projeto.ProjetoApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.betha.projeto.projeto.ProjetoApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.betha.projeto.projeto.ProjetoApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/ProjetoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/ProjetoApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +23,8 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
