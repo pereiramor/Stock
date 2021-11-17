@@ -10,7 +10,7 @@ import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @RestController
-@RequestMapping ("/api/estoque/")
+@RequestMapping ("/api/estoque")
 public class EstoqueController {
 
     @Autowired

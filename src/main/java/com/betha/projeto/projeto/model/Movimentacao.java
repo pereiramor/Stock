@@ -16,6 +16,9 @@ public class Movimentacao extends AbstractEntity {
     private Mercadoria mercadoria;
     @Column(name="quantidade")
     private Double quantidade;
+    @ManyToOne
+    @JoinColumn(name = "I_ESTOQUE", referencedColumnName = "ID")
+    private Estoque estoque;
     @Column (name = "Pagamento")
     private Pagamento pagamento;
 
@@ -45,5 +48,13 @@ public class Movimentacao extends AbstractEntity {
 
     public void setQuantidade(Double quantidade) {
         this.quantidade = quantidade;
+    }
+
+    public Estoque getEstoque() {
+        return estoque;
+    }
+
+    public void setEstoque(Estoque estoque) {
+        this.estoque = estoque;
     }
 }
