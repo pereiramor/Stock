@@ -3,11 +3,11 @@ package com.betha.projeto.projeto.resource;
 import com.betha.projeto.projeto.model.Pais;
 
 public class PaisDTO {
-    Long id;
+    String id;
     String name;
     Double populacao;
 
-    public PaisDTO(Long id, String name, Double populacao) {
+    public PaisDTO(String id, String name, Double populacao) {
         this.id = id;
         this.name = name;
         this.populacao = populacao;
@@ -16,11 +16,11 @@ public class PaisDTO {
     public PaisDTO (){
 
     }
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -42,7 +42,7 @@ public class PaisDTO {
 
     public static PaisDTO toDTO(Pais pais){
         PaisDTO dto = new PaisDTO();
-        dto.setId(pais.getId());
+        dto.setId(pais.getId().toString());
         dto.setPopulacao(pais.getPopulacao());
 
         return dto;
@@ -50,7 +50,7 @@ public class PaisDTO {
 
     public static Pais fromDTO(PaisDTO dto){
         Pais entity = new Pais();
-        entity.setId(dto.getId());
+        entity.setId(Long.getLong(dto.getId()));
         entity.setNome(dto.getName());
         entity.setPopulacao(dto.getPopulacao());
 

@@ -1,5 +1,6 @@
 package com.betha.projeto.projeto.resource;
 
+import com.betha.projeto.projeto.model.Estoque;
 import com.betha.projeto.projeto.model.Mercadoria;
 import com.betha.projeto.projeto.model.Movimentacao;
 import com.betha.projeto.projeto.model.TipoMovimentacao;
@@ -8,11 +9,13 @@ public class MovimentacaoDTO {
     TipoMovimentacao tipo;
     Mercadoria mercadoria;
     Double quantidade;
+    Estoque estoque;
 
-    public MovimentacaoDTO(TipoMovimentacao tipo, Mercadoria mercadoria, Double quantidade) {
+    public MovimentacaoDTO(TipoMovimentacao tipo, Mercadoria mercadoria, Double quantidade, Estoque estoque) {
         this.tipo = tipo;
         this.mercadoria = mercadoria;
         this.quantidade = quantidade;
+        this.estoque = estoque;
     }
 
     public MovimentacaoDTO (){
@@ -38,6 +41,14 @@ public class MovimentacaoDTO {
         return quantidade;
     }
 
+    public Estoque getEstoque() {
+        return estoque;
+    }
+
+    public void setEstoque(Estoque estoque) {
+        this.estoque = estoque;
+    }
+
     public void setQuantidade(Double quantidade) {
         this.quantidade = quantidade;
     }
@@ -46,6 +57,7 @@ public class MovimentacaoDTO {
        dto.setTipo(movimentacao.getTipo());
        dto.setMercadoria(movimentacao.getMercadoria());
        dto.setQuantidade(movimentacao.getQuantidade());
+       dto.setEstoque(movimentacao.getEstoque());
 
         return dto;
     }
@@ -55,6 +67,7 @@ public class MovimentacaoDTO {
         entity.setTipo(dto.getTipo());
         entity.setMercadoria(dto.getMercadoria());
         entity.setQuantidade(dto.getQuantidade());
+        entity.setEstoque(dto.getEstoque());
 
         return entity;
     }

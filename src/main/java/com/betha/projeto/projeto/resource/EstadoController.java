@@ -24,9 +24,9 @@ public class EstadoController {
     }
 
     @GetMapping("/{id}")
-    public Estado getEstadosId(@PathVariable(value = "id") Long estadoId, @RequestBody Estado estado) throws EntityNotFoundException {
+    public EstadoDTO getEstadosId(@PathVariable(value = "id") Long estadoId) throws EntityNotFoundException {
         Estado estadoFind = repository.findById(estadoId).orElseThrow(() ->new EntityNotFoundException("Estado não encontrado com ID::" +estadoId));
-        return estadoFind;
+        return EstadoDTO.toDTO(estadoFind);
     }
 
     @PostMapping

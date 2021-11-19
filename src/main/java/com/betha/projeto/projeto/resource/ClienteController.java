@@ -7,10 +7,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityNotFoundException;
+import javax.validation.ValidationException;
 import java.util.List;
 
 @RestController
-@RequestMapping ("/api/clientes/")
+@RequestMapping ("/api/clientes")
 public class ClienteController {
 
     @Autowired
@@ -30,6 +31,11 @@ public class ClienteController {
 
     @PostMapping
     public Cliente create(@RequestBody Cliente cliente) {
+        List<Cliente> byCpf = repository.findByCpf(cliente.getCpf());
+
+        if(!byCpf.isEmpty()){
+            throw new ValidationException("Já existe um cliente com o mesmo CPF registrado!");
+        }
 
         return repository.save(cliente);
     }

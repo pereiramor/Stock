@@ -14,10 +14,10 @@ public class Mercadoria extends AbstractEntity {
     @NotNull(message = "Não é possível validar sem o nome informado!")
     @Column(name="nome")
     private String nome;
-    @Size(max = 55, min = 2, message = "A altura informada é inválida!")
+    //@Size(max = 55, min = 2, message = "A altura informada é inválida!")
     @Column(name="altura")
     private Double altura;
-    @Size(max = 200, min = 5, message = "O peso informada é inválida!")
+    //@Size(max = 200, min = 5, message = "O peso informada é inválida!")
     @Column(name="peso")
     private Double peso;
     @Digits(integer = 3, fraction = 2, message = "O valor unitário não pode ultrapassar 2 digitos depois da virgula!")

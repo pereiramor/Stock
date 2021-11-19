@@ -3,24 +3,24 @@ package com.betha.projeto.projeto.resource;
 import com.betha.projeto.projeto.model.Estado;
 
 public class EstadoDTO {
-    private Long id;
+    private String id;
     private String nome;
     private PaisDTO pais;
 
     public EstadoDTO(){
 
     }
-    public EstadoDTO(Long id, String nome, PaisDTO pais) {
+    public EstadoDTO(String id, String nome, PaisDTO pais) {
         this.id = id;
         this.nome = nome;
         this.pais = pais;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -42,7 +42,7 @@ public class EstadoDTO {
 
     public static EstadoDTO toDTO(Estado estado){
         EstadoDTO dto = new EstadoDTO();
-        dto.setId(estado.getId());
+        dto.setId(estado.getId().toString());
         dto.setNome(estado.getNome());
         dto.setPais(estado.getPais() != null ? PaisDTO.toDTO(estado.getPais()) : null);
 
@@ -51,9 +51,9 @@ public class EstadoDTO {
 
     public static Estado fromDTO(EstadoDTO dto){
         Estado entity = new Estado ();
-        entity.setId(dto.getId());
+        entity.setId(Long.getLong(dto.getId()));
         entity.setNome(dto.getNome());
-        //entity.setPais(dto.getPais();
+      //  entity.setPais(dto.getPais();
         return entity;
 }
 }
