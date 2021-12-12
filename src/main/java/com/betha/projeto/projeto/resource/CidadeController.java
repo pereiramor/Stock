@@ -29,7 +29,7 @@ public class CidadeController {
     }
 
     @GetMapping("/{id}")
-    public Cidade getCidadesId(@PathVariable(value = "id") Long cidadeId, @RequestBody Cidade cidade) throws EntityNotFoundException {
+    public Cidade getCidadesId(@PathVariable(value = "id") Long cidadeId) throws EntityNotFoundException {
         Cidade cidadeFind = repository.findById(cidadeId).orElseThrow(() ->new EntityNotFoundException("Cidade não encontrado com ID::" +cidadeId));
         return cidadeFind;
     }

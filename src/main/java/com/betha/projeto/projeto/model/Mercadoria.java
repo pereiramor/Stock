@@ -6,7 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
 
 @Entity
 public class Mercadoria extends AbstractEntity {
@@ -23,8 +23,7 @@ public class Mercadoria extends AbstractEntity {
     @Digits(integer = 3, fraction = 2, message = "O valor unitário não pode ultrapassar 2 digitos depois da virgula!")
     @Column(name="Valor_Unitario")
     private Double valorUnitario;
-    @Column (name = "Pagamento")
-    private Pagamento pagamento;
+
 
     public Mercadoria(){
 

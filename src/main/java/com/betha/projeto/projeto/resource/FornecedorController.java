@@ -1,8 +1,7 @@
 package com.betha.projeto.projeto.resource;
 
-import com.betha.projeto.projeto.model.Cidade;
+
 import com.betha.projeto.projeto.model.Fornecedor;
-import com.betha.projeto.projeto.repository.CidadeRepository;
 import com.betha.projeto.projeto.repository.FornecedorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,7 +28,7 @@ import java.util.Map;
     }
 
     @GetMapping("/{id}")
-    public Fornecedor getFornecedoresId(@PathVariable(value = "id") Long fornecedorId, @RequestBody Fornecedor fornecedor) throws EntityNotFoundException {
+    public Fornecedor getFornecedoresId(@PathVariable(value = "id") Long fornecedorId) throws EntityNotFoundException {
         Fornecedor fornecedorFind = repository.findById(fornecedorId).orElseThrow(() ->new EntityNotFoundException("Fornecedor não encontrado com ID::" +fornecedorId));
         return fornecedorFind;
     }
@@ -46,6 +45,7 @@ import java.util.Map;
         fornecedorFind.setNome(fornecedor.getNome());
         fornecedorFind.setCnpj(fornecedor.getCnpj());
         fornecedorFind.setTelefone(fornecedor.getTelefone());
+        fornecedorFind.setEnderecos(fornecedor.getEnderecos());
 
         return repository.save(fornecedorFind);
 

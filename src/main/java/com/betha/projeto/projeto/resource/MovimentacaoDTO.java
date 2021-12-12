@@ -6,12 +6,14 @@ import com.betha.projeto.projeto.model.Movimentacao;
 import com.betha.projeto.projeto.model.TipoMovimentacao;
 
 public class MovimentacaoDTO {
+    Integer numero;
     TipoMovimentacao tipo;
-    Mercadoria mercadoria;
+    MercadoriaDTO mercadoria;
     Double quantidade;
-    Estoque estoque;
+    EstoqueDTO estoque;
 
-    public MovimentacaoDTO(TipoMovimentacao tipo, Mercadoria mercadoria, Double quantidade, Estoque estoque) {
+    public MovimentacaoDTO(int numero, TipoMovimentacao tipo, MercadoriaDTO mercadoria, Double quantidade, EstoqueDTO estoque) {
+        this.numero = numero;
         this.tipo = tipo;
         this.mercadoria = mercadoria;
         this.quantidade = quantidade;
@@ -29,11 +31,11 @@ public class MovimentacaoDTO {
         this.tipo = tipo;
     }
 
-    public Mercadoria getMercadoria() {
+    public MercadoriaDTO getMercadoria() {
         return mercadoria;
     }
 
-    public void setMercadoria(Mercadoria mercadoria) {
+    public void setMercadoria(MercadoriaDTO mercadoria) {
         this.mercadoria = mercadoria;
     }
 
@@ -41,23 +43,33 @@ public class MovimentacaoDTO {
         return quantidade;
     }
 
-    public Estoque getEstoque() {
+    public EstoqueDTO getEstoque() {
         return estoque;
     }
 
-    public void setEstoque(Estoque estoque) {
+    public void setEstoque(EstoqueDTO estoque) {
         this.estoque = estoque;
     }
 
     public void setQuantidade(Double quantidade) {
         this.quantidade = quantidade;
     }
+
+    public Integer getNumero() {
+        return numero;
+    }
+
+    public void setNumero(Integer numero) {
+        this.numero = numero;
+    }
+
     public static MovimentacaoDTO toDTO(Movimentacao movimentacao){
         MovimentacaoDTO dto = new MovimentacaoDTO();
        dto.setTipo(movimentacao.getTipo());
-       dto.setMercadoria(movimentacao.getMercadoria());
+       dto.setMercadoria(MercadoriaDTO.toDTO(movimentacao.getMercadoria()));
        dto.setQuantidade(movimentacao.getQuantidade());
-       dto.setEstoque(movimentacao.getEstoque());
+       dto.setEstoque(EstoqueDTO.toDTO(movimentacao.getEstoque()));
+       dto.setNumero(movimentacao.getNumero());
 
         return dto;
     }
@@ -65,9 +77,10 @@ public class MovimentacaoDTO {
     public static Movimentacao fromDTO(MovimentacaoDTO dto){
         Movimentacao entity = new Movimentacao ();
         entity.setTipo(dto.getTipo());
-        entity.setMercadoria(dto.getMercadoria());
+        entity.setMercadoria(MercadoriaDTO.fromDTO(dto.getMercadoria()));
         entity.setQuantidade(dto.getQuantidade());
-        entity.setEstoque(dto.getEstoque());
+        entity.setEstoque(EstoqueDTO.fromDTO(dto.getEstoque()));
+        entity.setNumero(dto.getNumero());
 
         return entity;
     }

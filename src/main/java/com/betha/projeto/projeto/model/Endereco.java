@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 public class Endereco extends AbstractEntity {
 
     @ManyToOne
-    @JoinColumn(name = "I_CIDADES",referencedColumnName = "ID")
+    @JoinColumn(name = "I_CIDADES", referencedColumnName = "ID")
     private Cidade cidade;
     @Column(name="nome_da_rua")
     private String nomerua;

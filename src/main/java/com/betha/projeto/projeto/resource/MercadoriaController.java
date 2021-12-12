@@ -29,7 +29,7 @@ public class MercadoriaController {
     }
 
     @GetMapping("/{id}")
-    public Mercadoria getMercadoriaId(@PathVariable(value = "id") Long mercadoriaId, @RequestBody Mercadoria mercadoria) throws EntityNotFoundException {
+    public Mercadoria getMercadoriaId(@PathVariable(value = "id") Long mercadoriaId) throws EntityNotFoundException {
         Mercadoria mercadoriaFind = repository.findById(mercadoriaId).orElseThrow(() ->new EntityNotFoundException("Mercadoria não encontrado com ID:" +mercadoriaId));
         return mercadoriaFind;
     }
@@ -44,6 +44,9 @@ public class MercadoriaController {
         Mercadoria mercadoriaFind = repository.findById(mercadoriaId).orElseThrow(() -> new EntityNotFoundException("Mercadoria não encontrada com 10:  "+mercadoriaId));
         mercadoriaFind.setId(mercadoria.getId());
         mercadoriaFind.setNome(mercadoria.getNome());
+        mercadoriaFind.setPeso(mercadoria.getPeso());
+        mercadoriaFind.setAltura(mercadoria.getAltura());
+        mercadoriaFind.setValorUnitario(mercadoria.getValorUnitario());
 
         return repository.save(mercadoriaFind);
 

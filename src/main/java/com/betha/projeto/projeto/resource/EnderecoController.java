@@ -4,14 +4,19 @@ package com.betha.projeto.projeto.resource;
 import com.betha.projeto.projeto.model.Endereco;
 import com.betha.projeto.projeto.repository.EnderecoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
-@RequestMapping ("/api/enderecos/")
+@RequestMapping ("/api/enderecos")
 public class EnderecoController {
 
     @Autowired
@@ -24,7 +29,7 @@ public class EnderecoController {
     }
 
     @GetMapping("/{id}")
-        public Endereco getEnderecosId(@PathVariable(value = "id") Long enderecoId, @RequestBody Endereco endereco) throws EntityNotFoundException {
+        public Endereco getEnderecosId(@PathVariable(value = "id") Long enderecoId) throws EntityNotFoundException {
             Endereco enderecoFind = repository.findById(enderecoId).orElseThrow(() ->new EntityNotFoundException("Endereco não encontrado com ID::" +enderecoId));
             return enderecoFind;
         }
@@ -54,5 +59,18 @@ public class EnderecoController {
 
         repository.delete(enderecoFind);
         return ResponseEntity.noContent().build();
+    }
+
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public Map<String, String> handleValidationExceptions(
+            MethodArgumentNotValidException ex) {
+        Map<String, String> errors = new HashMap<>();
+        ex.getBindingResult().getAllErrors().forEach((error) -> {
+            String fieldName = ((FieldError) error).getField();
+            String errorMessage = error.getDefaultMessage();
+            errors.put(fieldName, errorMessage);
+        });
+        return errors;
     }
 }

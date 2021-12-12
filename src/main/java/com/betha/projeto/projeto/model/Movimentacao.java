@@ -9,6 +9,8 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Movimentacao extends AbstractEntity {
+    @Column(name = "Numero")
+    private Integer numero;
     @Column(name="Tipo_de_movimentacao")
     private TipoMovimentacao tipo;
     @ManyToOne
@@ -19,8 +21,7 @@ public class Movimentacao extends AbstractEntity {
     @ManyToOne
     @JoinColumn(name = "I_ESTOQUE", referencedColumnName = "ID")
     private Estoque estoque;
-    @Column (name = "Pagamento")
-    private Pagamento pagamento;
+
 
 
     public Movimentacao() {
@@ -56,5 +57,13 @@ public class Movimentacao extends AbstractEntity {
 
     public void setEstoque(Estoque estoque) {
         this.estoque = estoque;
+    }
+
+    public Integer getNumero() {
+        return numero;
+    }
+
+    public void setNumero(Integer numero) {
+        this.numero = numero;
     }
 }

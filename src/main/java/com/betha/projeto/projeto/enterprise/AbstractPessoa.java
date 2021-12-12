@@ -2,11 +2,9 @@ package com.betha.projeto.projeto.enterprise;
 
 import com.betha.projeto.projeto.model.Endereco;
 
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.List;
+
 
 @MappedSuperclass
 public abstract class AbstractPessoa extends AbstractEntity{
@@ -14,8 +12,9 @@ public abstract class AbstractPessoa extends AbstractEntity{
     @Column(name="nome")
     @NotNull
     private String nome;
-   @Transient
-    private List<Endereco> enderecos;
+    @JoinColumn(name="I_enderecos", referencedColumnName = "ID")
+    @ManyToOne
+    private Endereco enderecos;
     @Column(name="telefone")
     private String telefone;
 
@@ -30,11 +29,11 @@ public abstract class AbstractPessoa extends AbstractEntity{
         this.nome = nome;
     }
 
-    public List<Endereco> getEnderecos() {
+    public Endereco getEnderecos() {
         return enderecos;
     }
 
-    public void setEnderecos(List<Endereco> enderecos) {
+    public void setEnderecos(Endereco enderecos) {
         this.enderecos = enderecos;
     }
 

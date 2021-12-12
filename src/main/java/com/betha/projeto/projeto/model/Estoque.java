@@ -12,16 +12,19 @@ public class Estoque extends AbstractEntity {
 
     @Column(name="descricao")
     private String descricao;
-   @Transient
-    private List<Movimentacao> movimentacoes;
+   //@Transient
+    //private List<Movimentacao> movimentacoes;
+   @Column(name="nome")
+   private String nome;
 
    public Estoque(){
 
    }
 
-    public Estoque(Long id, String descricao) {
-        super.setId(id);
+    public Estoque(String descricao, List<Movimentacao> movimentacoes, String nome) {
         this.descricao = descricao;
+        //this.movimentacoes = movimentacoes;
+        this.nome = nome;
     }
 
     public String getDescricao() {
@@ -30,5 +33,13 @@ public class Estoque extends AbstractEntity {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

@@ -5,16 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a198898-80e6-4d93-9c94-6e0369d9c548" name="Default Changelist" comment="alteraçoes reuniao 17.11">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_11_2021_11_02_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_11_2021_11_02__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/enterprise/AbstractPessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/enterprise/AbstractPessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/ContaUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/ContaUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Estoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Estoque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Fornecedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Fornecedor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Mercadoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Mercadoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Movimentacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/model/Movimentacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/repository/ClienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/repository/ClienteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/CidadeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EnderecoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EnderecoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EnderecoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EnderecoDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstadoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstadoDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstoqueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstoqueDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstoqueDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/FornecedorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/FornecedorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/FornecedorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/FornecedorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MercadoriaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MercadoriaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MercadoriaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MercadoriaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MovimentacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MovimentacaoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MovimentacaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/MovimentacaoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/PaisDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/PaisDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,19 +123,5 @@
     <MESSAGE value="alteraçoes projeto" />
     <MESSAGE value="alteraçoes reuniao 17.11" />
     <option name="LAST_COMMIT_MESSAGE" value="alteraçoes reuniao 17.11" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/EstadoController.java</url>
-          <line>27</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

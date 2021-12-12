@@ -30,9 +30,9 @@ import java.util.Map;
         }
 
         @GetMapping("/{id}")
-        public Movimentacao getMovimentacoesId(@PathVariable(value = "id") Long MovimentacaoId, @RequestBody Movimentacao movimentacao) throws EntityNotFoundException {
+        public MovimentacaoDTO getMovimentacoesId(@PathVariable(value = "id") Long MovimentacaoId) throws EntityNotFoundException {
             Movimentacao movimentacaoFind = repository.findById(MovimentacaoId).orElseThrow(() -> new EntityNotFoundException("Movimentaçao não encontrada com ID:" + MovimentacaoId));
-            return movimentacaoFind;
+            return MovimentacaoDTO.toDTO(movimentacaoFind);
         }
 
         @PostMapping
@@ -44,7 +44,11 @@ import java.util.Map;
         public Movimentacao update(@PathVariable(value = "id") Long movimentacaoId, @RequestBody Movimentacao movimentacao) throws EntityNotFoundException {
             Movimentacao movimentacaoFind = repository.findById(movimentacaoId).orElseThrow(() -> new EntityNotFoundException("Movimentacao não encontrada com 10:  "+movimentacaoId));
             movimentacaoFind.setId(movimentacao.getId());
+            movimentacaoFind.setNumero(movimentacao.getNumero());
             movimentacaoFind.setMercadoria(movimentacao.getMercadoria());
+            movimentacaoFind.setEstoque(movimentacaoFind.getEstoque());
+            movimentacaoFind.setQuantidade(movimentacaoFind.getQuantidade());
+            movimentacaoFind.setTipo(movimentacaoFind.getTipo());
 
             return repository.save(movimentacaoFind);
 

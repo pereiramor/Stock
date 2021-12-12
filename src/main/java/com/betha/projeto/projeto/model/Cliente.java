@@ -21,21 +21,21 @@ public class Cliente extends AbstractPessoa {
     private  Sexo sexo;
     @Column(name = "Raça")
     private Raca raca;
-    @Column (name = "Pagamento")
-    private Pagamento pagamento;
+
 
     public Cliente(){
 
     }
-    public Cliente(Long id, String nome, String cpf, List<Endereco> enderecos, String email, String rg) {
-        super.setId(id);
-        super.setNome(nome);
+
+    public Cliente(String cpf, String email, String rg, Documento documento, Sexo sexo, Raca raca) {
         this.cpf = cpf;
-        super.setEnderecos(enderecos);
         this.email = email;
         this.rg = rg;
-    }
+        this.documento = documento;
+        this.sexo = sexo;
+        this.raca = raca;
 
+    }
 
     public String getCpf() {
         return cpf;
@@ -60,6 +60,30 @@ public class Cliente extends AbstractPessoa {
 
     public void setRg(String rg) {
         this.rg = rg;
+    }
+
+    public Documento getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(Documento documento) {
+        this.documento = documento;
+    }
+
+    public Sexo getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
+    }
+
+    public Raca getRaca() {
+        return raca;
+    }
+
+    public void setRaca(Raca raca) {
+        this.raca = raca;
     }
 
 }

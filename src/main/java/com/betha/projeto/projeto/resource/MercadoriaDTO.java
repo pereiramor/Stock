@@ -4,13 +4,13 @@ import com.betha.projeto.projeto.model.Fornecedor;
 import com.betha.projeto.projeto.model.Mercadoria;
 
 public class MercadoriaDTO {
-    Long id;
-    String nome;
-    Double altura;
-    Double peso;
-    Double valorUnitario;
+   public String id;
+   public String nome;
+   public Double altura;
+   public Double peso;
+   public Double valorUnitario;
 
-    public MercadoriaDTO(Long id, String nome, Double altura, Double peso, Double valorUnitario) {
+    public MercadoriaDTO(String id, String nome, Double altura, Double peso, Double valorUnitario) {
         this.id = id;
         this.nome = nome;
         this.altura = altura;
@@ -21,11 +21,11 @@ public class MercadoriaDTO {
     public  MercadoriaDTO (){
 
     }
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -63,7 +63,7 @@ public class MercadoriaDTO {
 
     public static MercadoriaDTO toDTO(Mercadoria mercadoria){
         MercadoriaDTO dto = new MercadoriaDTO();
-        dto.setId(mercadoria.getId());
+        dto.setId(mercadoria.getId().toString());
         dto.setNome(mercadoria.getNome());
         dto.setAltura(mercadoria.getAltura());
         dto.setPeso(mercadoria.getPeso());
@@ -74,7 +74,7 @@ public class MercadoriaDTO {
 
     public static Mercadoria fromDTO(MercadoriaDTO dto){
         Mercadoria entity = new Mercadoria ();
-        entity.setId(dto.getId());
+        entity.setId(Long.getLong(dto.getId()));
         entity.setNome(dto.getNome());
         entity.setAltura(dto.getAltura());
         entity.setPeso(dto.getPeso());

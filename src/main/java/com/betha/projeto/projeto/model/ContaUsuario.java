@@ -8,8 +8,4 @@ public class ContaUsuario {
 
 
 }
-// classe normal?
-// interface?
-// get e set??
-// construtor?
-// diferenciar admin de usuario simples
+
