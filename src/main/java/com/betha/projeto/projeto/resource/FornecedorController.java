@@ -28,9 +28,9 @@ import java.util.Map;
     }
 
     @GetMapping("/{id}")
-    public Fornecedor getFornecedoresId(@PathVariable(value = "id") Long fornecedorId) throws EntityNotFoundException {
+    public FornecedorDTO getFornecedoresId(@PathVariable(value = "id") Long fornecedorId) throws EntityNotFoundException {
         Fornecedor fornecedorFind = repository.findById(fornecedorId).orElseThrow(() ->new EntityNotFoundException("Fornecedor não encontrado com ID::" +fornecedorId));
-        return fornecedorFind;
+        return FornecedorDTO.toDTO(fornecedorFind);
     }
 
     @PostMapping

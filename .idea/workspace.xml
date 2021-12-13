@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a198898-80e6-4d93-9c94-6e0369d9c548" name="Default Changelist" comment="FINALIZADO 12.12" />
+    <list default="true" id="9a198898-80e6-4d93-9c94-6e0369d9c548" name="Default Changelist" comment="FINALIZADO 12.12">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/FornecedorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/betha/projeto/projeto/resource/FornecedorController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

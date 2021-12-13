@@ -29,9 +29,9 @@ public class ClienteController {
     }
 
     @GetMapping("/{id}")
-    public Cliente getClientesId(@PathVariable(value = "id") Long clienteId) throws EntityNotFoundException {
+    public ClienteDTO getClientesId(@PathVariable(value = "id") Long clienteId) throws EntityNotFoundException {
         Cliente clienteFind = repository.findById(clienteId).orElseThrow(() ->new EntityNotFoundException("Cliente não encontrado com ID::" +clienteId));
-        return clienteFind;
+        return ClienteDTO.toDTO(clienteFind);
     }
 
     @PostMapping
