@@ -29,9 +29,9 @@ public class EnderecoController {
     }
 
     @GetMapping("/{id}")
-        public Endereco getEnderecosId(@PathVariable(value = "id") Long enderecoId) throws EntityNotFoundException {
+        public EnderecoDTO getEnderecosId(@PathVariable(value = "id") Long enderecoId) throws EntityNotFoundException {
             Endereco enderecoFind = repository.findById(enderecoId).orElseThrow(() ->new EntityNotFoundException("Endereco não encontrado com ID::" +enderecoId));
-            return enderecoFind;
+        return EnderecoDTO.toDTO(enderecoFind);
         }
 
 
